@@ -7,21 +7,35 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		136633D77158A55B3742F520 /* Pods_MVVM.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = BAB8E9B0185DAE91E5027144 /* Pods_MVVM.framework */; };
 		CE3E5895210750BB00BE3FC0 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE3E5894210750BB00BE3FC0 /* AppDelegate.swift */; };
-		CE3E5897210750BB00BE3FC0 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE3E5896210750BB00BE3FC0 /* ViewController.swift */; };
+		CE3E5897210750BB00BE3FC0 /* MainViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE3E5896210750BB00BE3FC0 /* MainViewController.swift */; };
 		CE3E589A210750BB00BE3FC0 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = CE3E5898210750BB00BE3FC0 /* Main.storyboard */; };
 		CE3E589C210750BB00BE3FC0 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = CE3E589B210750BB00BE3FC0 /* Assets.xcassets */; };
 		CE3E589F210750BB00BE3FC0 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = CE3E589D210750BB00BE3FC0 /* LaunchScreen.storyboard */; };
+		CE3E58A82107774000BE3FC0 /* Car.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE3E58A72107774000BE3FC0 /* Car.swift */; };
+		CE3E58AB21079AC400BE3FC0 /* CarCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE3E58AA21079AC400BE3FC0 /* CarCell.swift */; };
+		CE3E58AD21079B0600BE3FC0 /* CarCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = CE3E58AC21079B0600BE3FC0 /* CarCell.xib */; };
+		CE3E58AF2107A06500BE3FC0 /* Owner.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE3E58AE2107A06500BE3FC0 /* Owner.swift */; };
+		CE3E58B52107A21D00BE3FC0 /* CarListViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE3E58B42107A21D00BE3FC0 /* CarListViewModel.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		3D2C8A371125C6254F376354 /* Pods-MVVM.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-MVVM.debug.xcconfig"; path = "Pods/Target Support Files/Pods-MVVM/Pods-MVVM.debug.xcconfig"; sourceTree = "<group>"; };
+		BAB8E9B0185DAE91E5027144 /* Pods_MVVM.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_MVVM.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		C51E642502395BE41396EDA7 /* Pods-MVVM.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-MVVM.release.xcconfig"; path = "Pods/Target Support Files/Pods-MVVM/Pods-MVVM.release.xcconfig"; sourceTree = "<group>"; };
 		CE3E5891210750BB00BE3FC0 /* MVVM.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = MVVM.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		CE3E5894210750BB00BE3FC0 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
-		CE3E5896210750BB00BE3FC0 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
+		CE3E5896210750BB00BE3FC0 /* MainViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainViewController.swift; sourceTree = "<group>"; };
 		CE3E5899210750BB00BE3FC0 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		CE3E589B210750BB00BE3FC0 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		CE3E589E210750BB00BE3FC0 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		CE3E58A0210750BB00BE3FC0 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		CE3E58A72107774000BE3FC0 /* Car.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Car.swift; sourceTree = "<group>"; };
+		CE3E58AA21079AC400BE3FC0 /* CarCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CarCell.swift; sourceTree = "<group>"; };
+		CE3E58AC21079B0600BE3FC0 /* CarCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = CarCell.xib; sourceTree = "<group>"; };
+		CE3E58AE2107A06500BE3FC0 /* Owner.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Owner.swift; sourceTree = "<group>"; };
+		CE3E58B42107A21D00BE3FC0 /* CarListViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CarListViewModel.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -29,17 +43,29 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				136633D77158A55B3742F520 /* Pods_MVVM.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		BD817AB4C09D8532C8A33267 /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				3D2C8A371125C6254F376354 /* Pods-MVVM.debug.xcconfig */,
+				C51E642502395BE41396EDA7 /* Pods-MVVM.release.xcconfig */,
+			);
+			name = Pods;
+			sourceTree = "<group>";
+		};
 		CE3E5888210750BB00BE3FC0 = {
 			isa = PBXGroup;
 			children = (
 				CE3E5893210750BB00BE3FC0 /* MVVM */,
 				CE3E5892210750BB00BE3FC0 /* Products */,
+				BD817AB4C09D8532C8A33267 /* Pods */,
+				E45136E1065F188E539D3762 /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -54,14 +80,83 @@
 		CE3E5893210750BB00BE3FC0 /* MVVM */ = {
 			isa = PBXGroup;
 			children = (
-				CE3E5894210750BB00BE3FC0 /* AppDelegate.swift */,
-				CE3E5896210750BB00BE3FC0 /* ViewController.swift */,
-				CE3E5898210750BB00BE3FC0 /* Main.storyboard */,
+				CE3E58B62107A25800BE3FC0 /* Application */,
+				CE3E58B02107A13900BE3FC0 /* Modules */,
+				CE3E58A62107770B00BE3FC0 /* Models */,
+				CE3E58A921079A9D00BE3FC0 /* Views */,
+				CE3E58B32107A1FA00BE3FC0 /* ViewModels */,
 				CE3E589B210750BB00BE3FC0 /* Assets.xcassets */,
 				CE3E589D210750BB00BE3FC0 /* LaunchScreen.storyboard */,
 				CE3E58A0210750BB00BE3FC0 /* Info.plist */,
 			);
 			path = MVVM;
+			sourceTree = "<group>";
+		};
+		CE3E58A62107770B00BE3FC0 /* Models */ = {
+			isa = PBXGroup;
+			children = (
+				CE3E58A72107774000BE3FC0 /* Car.swift */,
+				CE3E58AE2107A06500BE3FC0 /* Owner.swift */,
+			);
+			path = Models;
+			sourceTree = "<group>";
+		};
+		CE3E58A921079A9D00BE3FC0 /* Views */ = {
+			isa = PBXGroup;
+			children = (
+				CE3E58B22107A19D00BE3FC0 /* Car */,
+			);
+			path = Views;
+			sourceTree = "<group>";
+		};
+		CE3E58B02107A13900BE3FC0 /* Modules */ = {
+			isa = PBXGroup;
+			children = (
+				CE3E58B12107A14800BE3FC0 /* Main */,
+			);
+			path = Modules;
+			sourceTree = "<group>";
+		};
+		CE3E58B12107A14800BE3FC0 /* Main */ = {
+			isa = PBXGroup;
+			children = (
+				CE3E5898210750BB00BE3FC0 /* Main.storyboard */,
+				CE3E5896210750BB00BE3FC0 /* MainViewController.swift */,
+			);
+			path = Main;
+			sourceTree = "<group>";
+		};
+		CE3E58B22107A19D00BE3FC0 /* Car */ = {
+			isa = PBXGroup;
+			children = (
+				CE3E58AC21079B0600BE3FC0 /* CarCell.xib */,
+				CE3E58AA21079AC400BE3FC0 /* CarCell.swift */,
+			);
+			path = Car;
+			sourceTree = "<group>";
+		};
+		CE3E58B32107A1FA00BE3FC0 /* ViewModels */ = {
+			isa = PBXGroup;
+			children = (
+				CE3E58B42107A21D00BE3FC0 /* CarListViewModel.swift */,
+			);
+			path = ViewModels;
+			sourceTree = "<group>";
+		};
+		CE3E58B62107A25800BE3FC0 /* Application */ = {
+			isa = PBXGroup;
+			children = (
+				CE3E5894210750BB00BE3FC0 /* AppDelegate.swift */,
+			);
+			path = Application;
+			sourceTree = "<group>";
+		};
+		E45136E1065F188E539D3762 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				BAB8E9B0185DAE91E5027144 /* Pods_MVVM.framework */,
+			);
+			name = Frameworks;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -71,9 +166,12 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = CE3E58A3210750BB00BE3FC0 /* Build configuration list for PBXNativeTarget "MVVM" */;
 			buildPhases = (
+				1FE81EDA410618A966380731 /* [CP] Check Pods Manifest.lock */,
 				CE3E588D210750BB00BE3FC0 /* Sources */,
 				CE3E588E210750BB00BE3FC0 /* Frameworks */,
 				CE3E588F210750BB00BE3FC0 /* Resources */,
+				B5FC5FEF734632BC708EA6F0 /* [CP] Embed Pods Frameworks */,
+				E0289318AFF05D5FF76C790F /* [CP] Copy Pods Resources */,
 			);
 			buildRules = (
 			);
@@ -125,19 +223,88 @@
 			files = (
 				CE3E589F210750BB00BE3FC0 /* LaunchScreen.storyboard in Resources */,
 				CE3E589C210750BB00BE3FC0 /* Assets.xcassets in Resources */,
+				CE3E58AD21079B0600BE3FC0 /* CarCell.xib in Resources */,
 				CE3E589A210750BB00BE3FC0 /* Main.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXResourcesBuildPhase section */
 
+/* Begin PBXShellScriptBuildPhase section */
+		1FE81EDA410618A966380731 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-MVVM-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+		B5FC5FEF734632BC708EA6F0 /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+				"${SRCROOT}/Pods/Target Support Files/Pods-MVVM/Pods-MVVM-frameworks.sh",
+				"${BUILT_PRODUCTS_DIR}/Alamofire/Alamofire.framework",
+				"${BUILT_PRODUCTS_DIR}/AlamofireObjectMapper/AlamofireObjectMapper.framework",
+				"${BUILT_PRODUCTS_DIR}/ObjectMapper/ObjectMapper.framework",
+				"${BUILT_PRODUCTS_DIR}/Realm/Realm.framework",
+				"${BUILT_PRODUCTS_DIR}/RealmSwift/RealmSwift.framework",
+				"${BUILT_PRODUCTS_DIR}/RxSwift/RxSwift.framework",
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputPaths = (
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Alamofire.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/AlamofireObjectMapper.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/ObjectMapper.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Realm.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/RealmSwift.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/RxSwift.framework",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-MVVM/Pods-MVVM-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		E0289318AFF05D5FF76C790F /* [CP] Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Copy Pods Resources";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-MVVM/Pods-MVVM-resources.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
+
 /* Begin PBXSourcesBuildPhase section */
 		CE3E588D210750BB00BE3FC0 /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				CE3E5897210750BB00BE3FC0 /* ViewController.swift in Sources */,
+				CE3E5897210750BB00BE3FC0 /* MainViewController.swift in Sources */,
+				CE3E58B52107A21D00BE3FC0 /* CarListViewModel.swift in Sources */,
 				CE3E5895210750BB00BE3FC0 /* AppDelegate.swift in Sources */,
+				CE3E58AB21079AC400BE3FC0 /* CarCell.swift in Sources */,
+				CE3E58AF2107A06500BE3FC0 /* Owner.swift in Sources */,
+				CE3E58A82107774000BE3FC0 /* Car.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -272,6 +439,7 @@
 		};
 		CE3E58A4210750BB00BE3FC0 /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 3D2C8A371125C6254F376354 /* Pods-MVVM.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
@@ -286,6 +454,7 @@
 		};
 		CE3E58A5210750BB00BE3FC0 /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = C51E642502395BE41396EDA7 /* Pods-MVVM.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
