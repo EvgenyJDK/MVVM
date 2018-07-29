@@ -20,12 +20,29 @@ class MainViewController: UIViewController {
         super.viewDidLoad()
         
         configurateUI()
+        observeViewModel()
+        launchApp()
     }
     
     private func configurateUI() {
         tableView.register(UINib(nibName: "CarCell", bundle: nil), forCellReuseIdentifier: "carCell")
         tableView.tableFooterView = UIView(frame: .zero)
     }
+    
+    private func observeViewModel() {
+        carListViewModel.successHandler = { [weak self] (carList) in
+            self?.carList.value = carList
+            self?.tableView.reloadData()
+        }
+        carListViewModel.errorHandler = { error in
+            print("CarListViewModel errorHandler")
+        }
+    }
+    
+    private func launchApp() {
+        carListViewModel.load(store: false)
+    }
+    
 }
 
 

@@ -18,4 +18,19 @@ class CarListViewModel {
     init() {
     }
     
+    func load(store: Bool) {
+        if !store { loadList() }
+        else { loadListFromStore() }
+    }
+    
+    private func loadList() {
+        
+    }
+  
+    private func loadListFromStore() {
+        carList.value = StoreService.shared.load()
+        self.successHandler(self.carList.value)
+    }
+    
+    
 }

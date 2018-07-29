@@ -18,6 +18,8 @@
 		CE3E58AD21079B0600BE3FC0 /* CarCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = CE3E58AC21079B0600BE3FC0 /* CarCell.xib */; };
 		CE3E58AF2107A06500BE3FC0 /* Owner.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE3E58AE2107A06500BE3FC0 /* Owner.swift */; };
 		CE3E58B52107A21D00BE3FC0 /* CarListViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE3E58B42107A21D00BE3FC0 /* CarListViewModel.swift */; };
+		CECDC68B210E38A600A452C7 /* StoreService.swift in Sources */ = {isa = PBXBuildFile; fileRef = CECDC68A210E38A600A452C7 /* StoreService.swift */; };
+		CECDC68E210E38EC00A452C7 /* CarObject.swift in Sources */ = {isa = PBXBuildFile; fileRef = CECDC68D210E38EC00A452C7 /* CarObject.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -36,6 +38,8 @@
 		CE3E58AC21079B0600BE3FC0 /* CarCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = CarCell.xib; sourceTree = "<group>"; };
 		CE3E58AE2107A06500BE3FC0 /* Owner.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Owner.swift; sourceTree = "<group>"; };
 		CE3E58B42107A21D00BE3FC0 /* CarListViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CarListViewModel.swift; sourceTree = "<group>"; };
+		CECDC68A210E38A600A452C7 /* StoreService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StoreService.swift; sourceTree = "<group>"; };
+		CECDC68D210E38EC00A452C7 /* CarObject.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CarObject.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -81,10 +85,12 @@
 			isa = PBXGroup;
 			children = (
 				CE3E58B62107A25800BE3FC0 /* Application */,
+				CECDC68F210E44BA00A452C7 /* API */,
 				CE3E58B02107A13900BE3FC0 /* Modules */,
 				CE3E58A62107770B00BE3FC0 /* Models */,
 				CE3E58A921079A9D00BE3FC0 /* Views */,
 				CE3E58B32107A1FA00BE3FC0 /* ViewModels */,
+				CECDC689210E380900A452C7 /* Services */,
 				CE3E589B210750BB00BE3FC0 /* Assets.xcassets */,
 				CE3E589D210750BB00BE3FC0 /* LaunchScreen.storyboard */,
 				CE3E58A0210750BB00BE3FC0 /* Info.plist */,
@@ -95,6 +101,7 @@
 		CE3E58A62107770B00BE3FC0 /* Models */ = {
 			isa = PBXGroup;
 			children = (
+				CECDC68C210E38D600A452C7 /* Realm */,
 				CE3E58A72107774000BE3FC0 /* Car.swift */,
 				CE3E58AE2107A06500BE3FC0 /* Owner.swift */,
 			);
@@ -149,6 +156,29 @@
 				CE3E5894210750BB00BE3FC0 /* AppDelegate.swift */,
 			);
 			path = Application;
+			sourceTree = "<group>";
+		};
+		CECDC689210E380900A452C7 /* Services */ = {
+			isa = PBXGroup;
+			children = (
+				CECDC68A210E38A600A452C7 /* StoreService.swift */,
+			);
+			path = Services;
+			sourceTree = "<group>";
+		};
+		CECDC68C210E38D600A452C7 /* Realm */ = {
+			isa = PBXGroup;
+			children = (
+				CECDC68D210E38EC00A452C7 /* CarObject.swift */,
+			);
+			path = Realm;
+			sourceTree = "<group>";
+		};
+		CECDC68F210E44BA00A452C7 /* API */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = API;
 			sourceTree = "<group>";
 		};
 		E45136E1065F188E539D3762 /* Frameworks */ = {
@@ -304,7 +334,9 @@
 				CE3E5895210750BB00BE3FC0 /* AppDelegate.swift in Sources */,
 				CE3E58AB21079AC400BE3FC0 /* CarCell.swift in Sources */,
 				CE3E58AF2107A06500BE3FC0 /* Owner.swift in Sources */,
+				CECDC68B210E38A600A452C7 /* StoreService.swift in Sources */,
 				CE3E58A82107774000BE3FC0 /* Car.swift in Sources */,
+				CECDC68E210E38EC00A452C7 /* CarObject.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
