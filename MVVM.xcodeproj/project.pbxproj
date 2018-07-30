@@ -20,6 +20,9 @@
 		CE3E58B52107A21D00BE3FC0 /* CarListViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE3E58B42107A21D00BE3FC0 /* CarListViewModel.swift */; };
 		CECDC68B210E38A600A452C7 /* StoreService.swift in Sources */ = {isa = PBXBuildFile; fileRef = CECDC68A210E38A600A452C7 /* StoreService.swift */; };
 		CECDC68E210E38EC00A452C7 /* CarObject.swift in Sources */ = {isa = PBXBuildFile; fileRef = CECDC68D210E38EC00A452C7 /* CarObject.swift */; };
+		CECDC693210E4BEE00A452C7 /* API.swift in Sources */ = {isa = PBXBuildFile; fileRef = CECDC692210E4BEE00A452C7 /* API.swift */; };
+		CECDC695210E4C3D00A452C7 /* CarList.swift in Sources */ = {isa = PBXBuildFile; fileRef = CECDC694210E4C3D00A452C7 /* CarList.swift */; };
+		CECDC698210E4E5600A452C7 /* cars.json in Resources */ = {isa = PBXBuildFile; fileRef = CECDC697210E4E5600A452C7 /* cars.json */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -40,6 +43,9 @@
 		CE3E58B42107A21D00BE3FC0 /* CarListViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CarListViewModel.swift; sourceTree = "<group>"; };
 		CECDC68A210E38A600A452C7 /* StoreService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StoreService.swift; sourceTree = "<group>"; };
 		CECDC68D210E38EC00A452C7 /* CarObject.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CarObject.swift; sourceTree = "<group>"; };
+		CECDC692210E4BEE00A452C7 /* API.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = API.swift; sourceTree = "<group>"; };
+		CECDC694210E4C3D00A452C7 /* CarList.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CarList.swift; sourceTree = "<group>"; };
+		CECDC697210E4E5600A452C7 /* cars.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; name = cars.json; path = "../../../MVVM Issues/cars.json"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -86,6 +92,7 @@
 			children = (
 				CE3E58B62107A25800BE3FC0 /* Application */,
 				CECDC68F210E44BA00A452C7 /* API */,
+				CECDC696210E4DEF00A452C7 /* Data */,
 				CE3E58B02107A13900BE3FC0 /* Modules */,
 				CE3E58A62107770B00BE3FC0 /* Models */,
 				CE3E58A921079A9D00BE3FC0 /* Views */,
@@ -103,6 +110,7 @@
 			children = (
 				CECDC68C210E38D600A452C7 /* Realm */,
 				CE3E58A72107774000BE3FC0 /* Car.swift */,
+				CECDC694210E4C3D00A452C7 /* CarList.swift */,
 				CE3E58AE2107A06500BE3FC0 /* Owner.swift */,
 			);
 			path = Models;
@@ -177,8 +185,17 @@
 		CECDC68F210E44BA00A452C7 /* API */ = {
 			isa = PBXGroup;
 			children = (
+				CECDC692210E4BEE00A452C7 /* API.swift */,
 			);
 			path = API;
+			sourceTree = "<group>";
+		};
+		CECDC696210E4DEF00A452C7 /* Data */ = {
+			isa = PBXGroup;
+			children = (
+				CECDC697210E4E5600A452C7 /* cars.json */,
+			);
+			path = Data;
 			sourceTree = "<group>";
 		};
 		E45136E1065F188E539D3762 /* Frameworks */ = {
@@ -253,6 +270,7 @@
 			files = (
 				CE3E589F210750BB00BE3FC0 /* LaunchScreen.storyboard in Resources */,
 				CE3E589C210750BB00BE3FC0 /* Assets.xcassets in Resources */,
+				CECDC698210E4E5600A452C7 /* cars.json in Resources */,
 				CE3E58AD21079B0600BE3FC0 /* CarCell.xib in Resources */,
 				CE3E589A210750BB00BE3FC0 /* Main.storyboard in Resources */,
 			);
@@ -329,6 +347,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				CECDC695210E4C3D00A452C7 /* CarList.swift in Sources */,
 				CE3E5897210750BB00BE3FC0 /* MainViewController.swift in Sources */,
 				CE3E58B52107A21D00BE3FC0 /* CarListViewModel.swift in Sources */,
 				CE3E5895210750BB00BE3FC0 /* AppDelegate.swift in Sources */,
@@ -336,6 +355,7 @@
 				CE3E58AF2107A06500BE3FC0 /* Owner.swift in Sources */,
 				CECDC68B210E38A600A452C7 /* StoreService.swift in Sources */,
 				CE3E58A82107774000BE3FC0 /* Car.swift in Sources */,
+				CECDC693210E4BEE00A452C7 /* API.swift in Sources */,
 				CECDC68E210E38EC00A452C7 /* CarObject.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

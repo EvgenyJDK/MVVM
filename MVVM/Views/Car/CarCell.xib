@@ -64,9 +64,9 @@
                 </constraints>
             </tableViewCellContentView>
             <connections>
+                <outlet property="carModel" destination="VRL-K4-wr5" id="79h-Km-VpP"/>
                 <outlet property="color" destination="FdH-gD-Z06" id="tDe-we-YTt"/>
                 <outlet property="id" destination="INw-Sj-Vpk" id="JIf-8h-AUM"/>
-                <outlet property="model" destination="VRL-K4-wr5" id="936-h2-baI"/>
                 <outlet property="type" destination="wbM-nv-BDq" id="7an-YA-KUT"/>
             </connections>
             <point key="canvasLocation" x="24.5" y="-341.5"/>

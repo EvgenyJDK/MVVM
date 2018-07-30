@@ -15,22 +15,24 @@ class Car: Mappable {
     var type: String?
     var model: String?
     var color: String?
-    
+    var owners: [Owner]?
+
     required init?(map: Map) {
     }
-    
-    required init?(type: String, model: String, color: String) {
-//        self.id = id
+
+    required init?(id: Int, type: String, model: String, color: String) {
+        self.id = id
         self.type = type
         self.model = model
         self.color = color
     }
     
     func mapping(map: Map) {
-        id              <- map["id"]
-        type        <- map["type"]
-        model         <- map["model"]
-        color           <- map["color"]
+        id              <- map["car_id"]
+        type            <- map["car_type"]
+        model           <- map["car_model"]
+        color           <- map["car_color"]
+        owners          <- map["owners"]
     }
     
 }

@@ -40,7 +40,8 @@ class MainViewController: UIViewController {
     }
     
     private func launchApp() {
-        carListViewModel.load(store: false)
+//        carListViewModel.load(fileName: "cars", store: false)
+        carListViewModel.load(fileName: "cars", store: true)
     }
     
 }
@@ -55,14 +56,13 @@ extension MainViewController: UITableViewDataSource {
     }
     
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-//        return carList.value.count
-        return 2
+        return carList.value.count
     }
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let cell = tableView.dequeueReusableCell(withIdentifier: "carCell") as! CarCell
-//        let model = modelFrom(indexPath: indexPath)
-//        cell.fillWith(model: model)
+        let model = modelFrom(indexPath: indexPath)
+        cell.fillWith(model: model)
         return cell
     }
     

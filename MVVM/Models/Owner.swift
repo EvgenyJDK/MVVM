@@ -19,9 +19,9 @@ class Owner: Mappable {
     }
     
     func mapping(map: Map) {
-        id              <- map["id"]
-        name        <- map["name"]
-        phone         <- map["phone"]
+        id             <- map["owner_id"]
+        name           <- map["owner_name"]
+        phone          <- map["owner_phone"]
     }
     
 }

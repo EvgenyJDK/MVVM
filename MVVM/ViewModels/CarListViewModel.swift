@@ -18,15 +18,27 @@ class CarListViewModel {
     init() {
     }
     
-    func load(store: Bool) {
-        if !store { loadList() }
+    func load(fileName: String, store: Bool) {
+        if !store { loadList(fileName: fileName) }
         else { loadListFromStore() }
     }
     
-    private func loadList() {
-        
+    private func loadList(fileName: String) {
+        API.getDataFromJSONFile(fileName: fileName) { (carList) in
+            
+            if let list = carList {
+                var carArr: [Car] = []
+                list.forEach({ (car) in
+                    StoreService.shared.store(car: car)
+                    carArr.append(car)
+                    print(car.model)
+                })
+                self.carList.value = carArr
+            }
+            self.successHandler(self.carList.value)
+        }
     }
-  
+    
     private func loadListFromStore() {
         carList.value = StoreService.shared.load()
         self.successHandler(self.carList.value)

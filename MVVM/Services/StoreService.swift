@@ -21,13 +21,14 @@ class StoreService {
             }
         }
     }
+
     
     func load() -> [Car] {
         let realm = try! Realm()
         var carList: [Car] = []
         let car = realm.objects(CarObject.self)
         car.forEach { (carObject) in
-            if let car = Car.init(type: carObject.type, model: carObject.model, color: carObject.color) {
+            if let car = Car.init(id: carObject.id, type: carObject.type, model: carObject.model, color: carObject.color) {
                 carList.append(car)
             }
         }
