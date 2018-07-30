@@ -18,10 +18,15 @@ class Owner: Mappable {
     required init?(map: Map) {
     }
     
+    required init?(id: Int, name: String, phone: String) {
+        self.id = id
+        self.name = name
+        self.phone = phone
+    }
+    
     func mapping(map: Map) {
         id             <- map["owner_id"]
         name           <- map["owner_name"]
         phone          <- map["owner_phone"]
-    }
-    
+    } 
 }

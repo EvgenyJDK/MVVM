@@ -15,10 +15,7 @@ class CarObject: Object {
     @objc dynamic var type = ""
     @objc dynamic var model = ""
     @objc dynamic var color = ""
-    
-    @objc dynamic var owner_id = 0
-    @objc dynamic var owner_name = ""
-    @objc dynamic var owner_phone = ""
+    @objc dynamic var ownerId = Int()
     
     override static func primaryKey() -> String? {
         return "id"
@@ -31,11 +28,8 @@ class CarObject: Object {
         if let carColor = car.color { color = carColor }
         
         car.owners?.forEach({ (owner) in
-            if let ownerId = owner.id {owner_id = ownerId}
-            if let ownerName = owner.name {owner_name = ownerName}
-            if let ownerPhone = owner.phone {owner_phone = ownerPhone}
+            if let owner_Id = owner.id {ownerId = owner_Id }
         })
-
     }
 }
 

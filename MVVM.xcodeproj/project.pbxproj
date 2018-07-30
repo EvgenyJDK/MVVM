@@ -23,6 +23,8 @@
 		CECDC693210E4BEE00A452C7 /* API.swift in Sources */ = {isa = PBXBuildFile; fileRef = CECDC692210E4BEE00A452C7 /* API.swift */; };
 		CECDC695210E4C3D00A452C7 /* CarList.swift in Sources */ = {isa = PBXBuildFile; fileRef = CECDC694210E4C3D00A452C7 /* CarList.swift */; };
 		CECDC698210E4E5600A452C7 /* cars.json in Resources */ = {isa = PBXBuildFile; fileRef = CECDC697210E4E5600A452C7 /* cars.json */; };
+		CECDC69B210EFEEF00A452C7 /* Constants.swift in Sources */ = {isa = PBXBuildFile; fileRef = CECDC69A210EFEEF00A452C7 /* Constants.swift */; };
+		CECDC69D210F0B3000A452C7 /* OwnerObject.swift in Sources */ = {isa = PBXBuildFile; fileRef = CECDC69C210F0B3000A452C7 /* OwnerObject.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -46,6 +48,8 @@
 		CECDC692210E4BEE00A452C7 /* API.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = API.swift; sourceTree = "<group>"; };
 		CECDC694210E4C3D00A452C7 /* CarList.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CarList.swift; sourceTree = "<group>"; };
 		CECDC697210E4E5600A452C7 /* cars.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; name = cars.json; path = "../../../MVVM Issues/cars.json"; sourceTree = "<group>"; };
+		CECDC69A210EFEEF00A452C7 /* Constants.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Constants.swift; sourceTree = "<group>"; };
+		CECDC69C210F0B3000A452C7 /* OwnerObject.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OwnerObject.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -98,6 +102,7 @@
 				CE3E58A921079A9D00BE3FC0 /* Views */,
 				CE3E58B32107A1FA00BE3FC0 /* ViewModels */,
 				CECDC689210E380900A452C7 /* Services */,
+				CECDC699210EFED000A452C7 /* Helpers */,
 				CE3E589B210750BB00BE3FC0 /* Assets.xcassets */,
 				CE3E589D210750BB00BE3FC0 /* LaunchScreen.storyboard */,
 				CE3E58A0210750BB00BE3FC0 /* Info.plist */,
@@ -178,6 +183,7 @@
 			isa = PBXGroup;
 			children = (
 				CECDC68D210E38EC00A452C7 /* CarObject.swift */,
+				CECDC69C210F0B3000A452C7 /* OwnerObject.swift */,
 			);
 			path = Realm;
 			sourceTree = "<group>";
@@ -196,6 +202,14 @@
 				CECDC697210E4E5600A452C7 /* cars.json */,
 			);
 			path = Data;
+			sourceTree = "<group>";
+		};
+		CECDC699210EFED000A452C7 /* Helpers */ = {
+			isa = PBXGroup;
+			children = (
+				CECDC69A210EFEEF00A452C7 /* Constants.swift */,
+			);
+			path = Helpers;
 			sourceTree = "<group>";
 		};
 		E45136E1065F188E539D3762 /* Frameworks */ = {
@@ -348,6 +362,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				CECDC695210E4C3D00A452C7 /* CarList.swift in Sources */,
+				CECDC69B210EFEEF00A452C7 /* Constants.swift in Sources */,
 				CE3E5897210750BB00BE3FC0 /* MainViewController.swift in Sources */,
 				CE3E58B52107A21D00BE3FC0 /* CarListViewModel.swift in Sources */,
 				CE3E5895210750BB00BE3FC0 /* AppDelegate.swift in Sources */,
@@ -356,6 +371,7 @@
 				CECDC68B210E38A600A452C7 /* StoreService.swift in Sources */,
 				CE3E58A82107774000BE3FC0 /* Car.swift in Sources */,
 				CECDC693210E4BEE00A452C7 /* API.swift in Sources */,
+				CECDC69D210F0B3000A452C7 /* OwnerObject.swift in Sources */,
 				CECDC68E210E38EC00A452C7 /* CarObject.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

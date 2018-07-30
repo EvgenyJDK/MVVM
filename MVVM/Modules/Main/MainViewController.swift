@@ -42,8 +42,7 @@ class MainViewController: UIViewController {
     }
     
     private func launchApp() {
-        carListViewModel.load(fileName: "cars", store: false)
-//        carListViewModel.load(fileName: "cars", store: true)
+        carListViewModel.load(fileName: Constatnts.API.customName, store: false)
     }
     
     private func removeCar() {
@@ -57,16 +56,19 @@ class MainViewController: UIViewController {
 // MARK: - Actions
     
     @IBAction func loadFromFile(_ sender: Any) {
-        carListViewModel.load(fileName: "cars", store: false)
+        carListViewModel.load(fileName: Constatnts.API.customName, store: false)
     }
     
     @IBAction func loadFromDB(_ sender: Any) {
-        carListViewModel.load(fileName: "", store: true)
+        carListViewModel.load(fileName: nil, store: true)
     }
     
     @IBAction func addToDB(_ sender: Any) {
         carList.value.forEach { (car) in
             StoreService.shared.store(car: car)
+            car.owners?.forEach({ (owner) in
+                StoreService.shared.store(owner: owner)
+            })
         }
     }
         
@@ -75,7 +77,6 @@ class MainViewController: UIViewController {
         needRemoveCar = carList.value
         removeCar()
     }
-    
 }
 
 
@@ -99,7 +100,7 @@ extension MainViewController: UITableViewDataSource {
     }
     
     func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
-        return 167
+        return CGFloat(Constatnts.UI.cellHeight)
     }
 }
 

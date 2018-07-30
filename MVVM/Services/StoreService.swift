@@ -22,14 +22,38 @@ class StoreService {
         }
     }
     
+    func store(owner: Owner) {
+        DispatchQueue(label: "background").async {
+            let ownerObject = OwnerObject()
+            ownerObject.fillFrom(owner: owner)
+            let realm = try! Realm()
+            try! realm.write {
+                realm.add(ownerObject, update: true)
+            }
+        }
+    }
+
     func load() -> [Car] {
         let realm = try! Realm()
+        var ownerList: [Owner] = []
         var carList: [Car] = []
+        let owner = realm.objects(OwnerObject.self)
         let car = realm.objects(CarObject.self)
-        car.forEach { (carObject) in
-            if let car = Car.init(id: carObject.id, type: carObject.type, model: carObject.model, color: carObject.color) {
-                carList.append(car)
+
+        owner.forEach { (ownerObject) in
+            if let owner = Owner.init(id: ownerObject.id, name: ownerObject.name, phone: ownerObject.phone) {
+                ownerList.append(owner)
             }
+        }
+        
+        car.forEach { (carObject) in
+            ownerList.forEach({ (owner) in
+                if owner.id == carObject.ownerId {
+                    if let car = Car.init(id: carObject.id, type: carObject.type, model: carObject.model, color: carObject.color, owners: [owner]) {
+                        carList.append(car)
+                    }
+                }
+            })
         }
         return carList
     }
@@ -38,6 +62,7 @@ class StoreService {
         DispatchQueue(label: "background").async {
             let realm = try! Realm()
             try! realm.write {
+                realm.delete(realm.objects(OwnerObject.self))
                 realm.delete(realm.objects(CarObject.self))
             }
         }

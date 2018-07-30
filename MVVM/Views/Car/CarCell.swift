@@ -15,6 +15,9 @@ class CarCell: UITableViewCell {
     @IBOutlet weak var type: UILabel!
     @IBOutlet weak var carModel: UILabel!
     @IBOutlet weak var color: UILabel!
+    @IBOutlet weak var ownerId: UILabel!
+    @IBOutlet weak var name: UILabel!
+    @IBOutlet weak var phone: UILabel!
     
     override func awakeFromNib() {
         super.awakeFromNib()
@@ -25,6 +28,9 @@ class CarCell: UITableViewCell {
         type.text = model.type
         carModel.text = model.model
         color.text = model.color
+        ownerId.text = model.owners?[0].id?.description
+        name.text = model.owners?[0].name
+        phone.text = model.owners?[0].phone
     }
     
 }

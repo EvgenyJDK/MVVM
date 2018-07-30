@@ -18,8 +18,11 @@ class CarListViewModel {
     init() {
     }
     
-    func load(fileName: String, store: Bool) {
-        if !store { loadList(fileName: fileName) }
+    func load(fileName: String?, store: Bool) {
+        guard let name = fileName else {
+            return loadListFromStore()
+        }
+        if !store { loadList(fileName: name) }
         else { loadListFromStore() }
     }
     
@@ -38,6 +41,7 @@ class CarListViewModel {
     
     private func loadListFromStore() {
         carList.value = StoreService.shared.load()
+        carList.value.sort { $0.id! < $1.id! }
         self.successHandler(self.carList.value)
     }
     
