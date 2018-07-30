@@ -25,13 +25,10 @@ class CarListViewModel {
     
     private func loadList(fileName: String) {
         API.getDataFromJSONFile(fileName: fileName) { (carList) in
-            
             if let list = carList {
                 var carArr: [Car] = []
                 list.forEach({ (car) in
-                    StoreService.shared.store(car: car)
                     carArr.append(car)
-                    print(car.model)
                 })
                 self.carList.value = carArr
             }
@@ -44,5 +41,13 @@ class CarListViewModel {
         self.successHandler(self.carList.value)
     }
     
+    func removeCar(car: Car) {
+        for _ in carList.value {
+            if let index = carList.value.index(where: { $0.id == car.id }) {
+                carList.value.remove(at: index)
+            }
+            successHandler(carList.value)
+        }
+    }
     
 }

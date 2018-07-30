@@ -16,6 +16,8 @@ class MainViewController: UIViewController {
     private let carListViewModel = CarListViewModel()
     private var carList: Variable<[Car]> = Variable([])
     
+    var needRemoveCar: [Car] = []
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         
@@ -40,8 +42,38 @@ class MainViewController: UIViewController {
     }
     
     private func launchApp() {
-//        carListViewModel.load(fileName: "cars", store: false)
-        carListViewModel.load(fileName: "cars", store: true)
+        carListViewModel.load(fileName: "cars", store: false)
+//        carListViewModel.load(fileName: "cars", store: true)
+    }
+    
+    private func removeCar() {
+        for car in needRemoveCar {
+            carListViewModel.removeCar(car: car)
+        }
+        needRemoveCar.removeAll()
+    }
+    
+    
+// MARK: - Actions
+    
+    @IBAction func loadFromFile(_ sender: Any) {
+        carListViewModel.load(fileName: "cars", store: false)
+    }
+    
+    @IBAction func loadFromDB(_ sender: Any) {
+        carListViewModel.load(fileName: "", store: true)
+    }
+    
+    @IBAction func addToDB(_ sender: Any) {
+        carList.value.forEach { (car) in
+            StoreService.shared.store(car: car)
+        }
+    }
+        
+    @IBAction func clearDB(_ sender: Any) {
+        StoreService.shared.remove()
+        needRemoveCar = carList.value
+        removeCar()
     }
     
 }

@@ -21,7 +21,6 @@ class StoreService {
             }
         }
     }
-
     
     func load() -> [Car] {
         let realm = try! Realm()

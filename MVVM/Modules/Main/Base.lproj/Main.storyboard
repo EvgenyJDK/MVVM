@@ -6,6 +6,7 @@
     <dependencies>
         <deployment identifier="iOS"/>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="13772"/>
+        <capability name="Navigation items with more than one left or right bar item" minToolsVersion="7.0"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
@@ -41,8 +42,30 @@
                         <viewLayoutGuide key="safeArea" id="1JK-aE-Ola"/>
                     </view>
                     <navigationItem key="navigationItem" id="qy6-dD-s2i">
-                        <barButtonItem key="leftBarButtonItem" style="done" systemItem="refresh" id="oVA-Tl-jH8"/>
-                        <barButtonItem key="rightBarButtonItem" style="done" systemItem="save" id="nBs-86-mXM"/>
+                        <leftBarButtonItems>
+                            <barButtonItem style="done" systemItem="refresh" id="oVA-Tl-jH8">
+                                <connections>
+                                    <action selector="loadFromFile:" destination="ElR-uy-iwJ" id="HQr-iu-6lG"/>
+                                </connections>
+                            </barButtonItem>
+                            <barButtonItem systemItem="bookmarks" id="sAx-W7-LaA">
+                                <connections>
+                                    <action selector="loadFromDB:" destination="ElR-uy-iwJ" id="dD5-Jc-jYc"/>
+                                </connections>
+                            </barButtonItem>
+                        </leftBarButtonItems>
+                        <rightBarButtonItems>
+                            <barButtonItem style="done" systemItem="trash" id="nBs-86-mXM">
+                                <connections>
+                                    <action selector="clearDB:" destination="ElR-uy-iwJ" id="Wkz-Q6-1Hs"/>
+                                </connections>
+                            </barButtonItem>
+                            <barButtonItem systemItem="add" id="SaT-Dp-EoO">
+                                <connections>
+                                    <action selector="addToDB:" destination="ElR-uy-iwJ" id="rA3-qn-I97"/>
+                                </connections>
+                            </barButtonItem>
+                        </rightBarButtonItems>
                     </navigationItem>
                     <connections>
                         <outlet property="tableView" destination="ab8-QQ-4Wq" id="c9n-ee-qeW"/>
